@@ -1,0 +1,47 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/java
+{
+  "name": "microservice-programingtechi",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  // "image": "mcr.microsoft.com/devcontainers/java:0-17",
+  
+  "dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  "features": {
+    // "ghcr.io/devcontainers/features/java:1": {
+    //   "version": "none",
+    //   "installMaven": "true",
+    //   "installGradle": "true"
+    // }
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "java -version",
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      // Set *default* container specific settings.json values on container create.
+      "settings": {},
+
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "github.copilot",
+        "sohibe.java-generate-setters-getters",
+        "georgewfraser.vscode-javac",
+        "vmware.vscode-boot-dev-pack",
+        "mongodb.mongodb-vscode",
+        "cweijan.vscode-mysql-client2"
+      ]
+    }
+  }
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}
